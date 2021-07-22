@@ -1,0 +1,281 @@
+<State 0 (monitored)>
+gameChoice=CINQUE
+userChoice5=LIZARD
+</State 0 (monitored)>
+<UpdateSet - 0>
+computerChoice5=SCISSOR5
+outMess=Ha vinto il computer.
+</UpdateSet>
+<State 1 (controlled)>
+computerChoice5=SCISSOR5
+outMess=Ha vinto il computer.
+</State 1 (controlled)>
+<State 1 (monitored)>
+gameChoice=TRE
+userChoice3=PAPER
+</State 1 (monitored)>
+<UpdateSet - 1>
+computerChoice3=SCISSOR
+outMess=Ha vinto il computer.
+</UpdateSet>
+<State 2 (controlled)>
+computerChoice3=SCISSOR
+computerChoice5=SCISSOR5
+outMess=Ha vinto il computer.
+</State 2 (controlled)>
+<State 2 (monitored)>
+gameChoice=TRE
+userChoice3=ROCK
+</State 2 (monitored)>
+<UpdateSet - 2>
+computerChoice3=ROCK
+outMess=Draw.
+</UpdateSet>
+<State 3 (controlled)>
+computerChoice3=ROCK
+computerChoice5=SCISSOR5
+outMess=Draw.
+</State 3 (controlled)>
+<State 3 (monitored)>
+gameChoice=TRE
+userChoice3=ROCK
+</State 3 (monitored)>
+<UpdateSet - 3>
+computerChoice3=PAPER
+outMess=Ha vinto il computer.
+</UpdateSet>
+<State 4 (controlled)>
+computerChoice3=PAPER
+computerChoice5=SCISSOR5
+outMess=Ha vinto il computer.
+</State 4 (controlled)>
+<State 4 (monitored)>
+gameChoice=TRE
+userChoice3=ROCK
+</State 4 (monitored)>
+<UpdateSet - 4>
+computerChoice3=PAPER
+outMess=Ha vinto il computer.
+</UpdateSet>
+<State 5 (controlled)>
+computerChoice3=PAPER
+computerChoice5=SCISSOR5
+outMess=Ha vinto il computer.
+</State 5 (controlled)>
+<State 5 (monitored)>
+gameChoice=TRE
+userChoice3=ROCK
+</State 5 (monitored)>
+<UpdateSet - 5>
+computerChoice3=ROCK
+outMess=Draw.
+</UpdateSet>
+<State 6 (controlled)>
+computerChoice3=ROCK
+computerChoice5=SCISSOR5
+outMess=Draw.
+</State 6 (controlled)>
+<State 6 (monitored)>
+gameChoice=CINQUE
+userChoice5=LIZARD
+</State 6 (monitored)>
+<UpdateSet - 6>
+computerChoice5=LIZARD
+outMess=Draw.
+</UpdateSet>
+<State 7 (controlled)>
+computerChoice3=ROCK
+computerChoice5=LIZARD
+outMess=Draw.
+</State 7 (controlled)>
+<State 7 (monitored)>
+gameChoice=CINQUE
+userChoice5=ROCK5
+</State 7 (monitored)>
+<UpdateSet - 7>
+computerChoice5=SPOCK
+outMess=Ha vinto il computer.
+</UpdateSet>
+<State 8 (controlled)>
+computerChoice3=ROCK
+computerChoice5=SPOCK
+outMess=Ha vinto il computer.
+</State 8 (controlled)>
+<State 8 (monitored)>
+gameChoice=TRE
+userChoice3=ROCK
+</State 8 (monitored)>
+<UpdateSet - 8>
+computerChoice3=ROCK
+outMess=Draw.
+</UpdateSet>
+<State 9 (controlled)>
+computerChoice3=ROCK
+computerChoice5=SPOCK
+outMess=Draw.
+</State 9 (controlled)>
+<State 9 (monitored)>
+gameChoice=CINQUE
+userChoice5=SPOCK
+</State 9 (monitored)>
+<UpdateSet - 9>
+computerChoice5=ROCK5
+outMess=Hai vinto!
+</UpdateSet>
+<State 10 (controlled)>
+computerChoice3=ROCK
+computerChoice5=ROCK5
+outMess=Hai vinto!
+</State 10 (controlled)>
+<State 10 (monitored)>
+gameChoice=CINQUE
+userChoice5=SCISSOR5
+</State 10 (monitored)>
+<UpdateSet - 10>
+computerChoice5=LIZARD
+outMess=Hai vinto!
+</UpdateSet>
+<State 11 (controlled)>
+computerChoice3=ROCK
+computerChoice5=LIZARD
+outMess=Hai vinto!
+</State 11 (controlled)>
+<State 11 (monitored)>
+gameChoice=CINQUE
+userChoice5=ROCK5
+</State 11 (monitored)>
+<UpdateSet - 11>
+computerChoice5=SCISSOR5
+outMess=Hai vinto!
+</UpdateSet>
+<State 12 (controlled)>
+computerChoice3=ROCK
+computerChoice5=SCISSOR5
+outMess=Hai vinto!
+</State 12 (controlled)>
+<State 12 (monitored)>
+gameChoice=TRE
+userChoice3=ROCK
+</State 12 (monitored)>
+<UpdateSet - 12>
+computerChoice3=PAPER
+outMess=Ha vinto il computer.
+</UpdateSet>
+<State 13 (controlled)>
+computerChoice3=PAPER
+computerChoice5=SCISSOR5
+outMess=Ha vinto il computer.
+</State 13 (controlled)>
+<State 13 (monitored)>
+gameChoice=TRE
+userChoice3=ROCK
+</State 13 (monitored)>
+<UpdateSet - 13>
+computerChoice3=SCISSOR
+outMess=Hai vinto!
+</UpdateSet>
+<State 14 (controlled)>
+computerChoice3=SCISSOR
+computerChoice5=SCISSOR5
+outMess=Hai vinto!
+</State 14 (controlled)>
+//// starting scenario
+scenario SCENARIO_NAME
+load mor.asm
+set gameChoice := CINQUE;
+set userChoice5 := LIZARD;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+set gameChoice := TRE;
+set userChoice5 := LIZARD;
+set userChoice3 := PAPER;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = SCISSOR;
+set gameChoice := TRE;
+set userChoice5 := LIZARD;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Draw.;
+check computerChoice3 = ROCK;
+set gameChoice := TRE;
+set userChoice5 := LIZARD;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = PAPER;
+set gameChoice := TRE;
+set userChoice5 := LIZARD;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = PAPER;
+set gameChoice := TRE;
+set userChoice5 := LIZARD;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Draw.;
+check computerChoice3 = ROCK;
+set gameChoice := CINQUE;
+set userChoice5 := LIZARD;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = LIZARD;
+check outMess = Draw.;
+check computerChoice3 = ROCK;
+set gameChoice := CINQUE;
+set userChoice5 := ROCK5;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SPOCK;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = ROCK;
+set gameChoice := TRE;
+set userChoice5 := ROCK5;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SPOCK;
+check outMess = Draw.;
+check computerChoice3 = ROCK;
+set gameChoice := CINQUE;
+set userChoice5 := SPOCK;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = ROCK5;
+check outMess = Hai vinto!;
+check computerChoice3 = ROCK;
+set gameChoice := CINQUE;
+set userChoice5 := SCISSOR5;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = LIZARD;
+check outMess = Hai vinto!;
+check computerChoice3 = ROCK;
+set gameChoice := CINQUE;
+set userChoice5 := ROCK5;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Hai vinto!;
+check computerChoice3 = ROCK;
+set gameChoice := TRE;
+set userChoice5 := ROCK5;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = PAPER;
+set gameChoice := TRE;
+set userChoice5 := ROCK5;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Hai vinto!;
+check computerChoice3 = SCISSOR;
+step
