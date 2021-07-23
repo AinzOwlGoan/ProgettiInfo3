@@ -1,16 +1,16 @@
 #include <vector>
-#include "Characters.h"
+#include "Esploratore.h"
 
 
 class Spelonca{
 private:
-vector<Character*> enemies;
+vector<Esploratore*> enemies;
 char **room;
 public:
 Spelonca();
-vector<Character*> checkEnemies();
-void insertEnemy(Character* e);
-void uccisione(Character* e);
+vector<Esploratore*> checkEnemies();
+void insertEnemy(Esploratore* e);
+void uccisione(Esploratore* e);
 char** checkRoom();
 void updateRoom(char** r);
 virtual ~Spelonca();
@@ -35,7 +35,7 @@ public:
 Gioco(string n);
 void show();
 int heroMove(string m);
-int fight(Character* e);
+int fight(Esploratore* e);
 
 virtual ~Gioco();
 };

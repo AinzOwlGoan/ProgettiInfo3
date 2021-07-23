@@ -22,20 +22,20 @@ Spelonca::Spelonca() {
 	}
 }
 
-vector<Character*> Spelonca::checkEnemies() {
+vector<Esploratore*> Spelonca::checkEnemies() {
 	// ritorno tutti i nemici che sono stati inseriti nel Spelonca
 	return enemies;
 }
 
-void Spelonca::insertEnemy(Character *e) {
+void Spelonca::insertEnemy(Esploratore *e) {
 	// inserimento nella lista del nemico
 	enemies.push_back(e);
 }
 
-void Spelonca::uccisione(Character *e) {
-	vector<Character*>::iterator i = find(enemies.begin(), enemies.end(), e);
+void Spelonca::uccisione(Esploratore *e) {
+	vector<Esploratore*>::iterator i = find(enemies.begin(), enemies.end(), e);
 	enemies.erase(i);
-	cout << e->checkName() << " è stato ucciso!" << endl;
+	cout << e->checkNome() << " è stato ucciso!" << endl;
 	cout << endl;
 }
 
@@ -145,12 +145,12 @@ int Gioco::heroMove(string m) {
 						return 1;
 					}
 					if (r[i + i1][j + j1] == 'E') {
-						vector<Character*> e = checkEnemies();
+						vector<Esploratore*> e = checkEnemies();
 						int rnd = rand() % e.size();
-						Character *nemico = e.at(rnd);
-						cout << "Appare " << nemico->checkName();
+						Esploratore *nemico = e.at(rnd);
+						cout << "Appare " << nemico->checkNome();
 						cout << endl;
-						cout << "Vite:" << nemico->checkHp();
+						cout << "Vite:" << nemico->checkVita();
 						cout << endl;
 						changeMode();
 						int result = fight(nemico);
@@ -170,14 +170,15 @@ int Gioco::heroMove(string m) {
 }
 
 // Lotta tra nemico ed eroe
-int Gioco::fight(Character *e) {
-	while (hero.checkHp() > 0 && e->checkHp() > 0) {
+int Gioco::fight(Esploratore *e) {
+	while (hero.checkVita() > 0 && e->checkVita() > 0) {
 		// Premendo g lancio i dadi
 		if (showMenu() == "a") { // da sostituire con g, lancio dadi
 
 			// Lancio dadi da entrambi i membri
-			int HeroDice = hero.tiroDado();
+
 			int EnemyDice = e->tiroDado();
+			int HeroDice = hero.tiroDado();
 
 			cout << "Dado eroe: " << HeroDice << " Dado nemico: " << EnemyDice
 					<< endl;
@@ -185,7 +186,7 @@ int Gioco::fight(Character *e) {
 
 				hero.attacca(e);
 
-				if (e->checkHp() <= 0) {
+				if (e->checkVita() <= 0) {
 					uccisione(e);
 					changeMode();
 					return 0;
@@ -193,7 +194,7 @@ int Gioco::fight(Character *e) {
 			} else if (HeroDice < EnemyDice) {
 
 				e->attacca(&hero);
-				if (hero.checkHp() <= 0) {
+				if (hero.checkVita() <= 0) {
 					cout << "Sei morto!" << endl;
 					return 1;
 				}
@@ -213,9 +214,9 @@ int Gioco::fight(Character *e) {
 			} else if (coefficienteFuga < 80) {
 
 				cout << "Fuga fallita" << endl;
-				cout << "L'eroe ha" << hero.checkHp() << "vite" << endl;
+				cout << "L'eroe ha" << hero.checkVita() << "vite" << endl;
 				e->attacca(&hero);
-				if (hero.checkHp() <= 0) {
+				if (hero.checkVita() <= 0) {
 					cout << "Sei morto!" << endl;
 					return 1;
 				}
