@@ -1,0 +1,150 @@
+//// starting scenario
+scenario SCENARIO_NAME
+load mor.asm
+set userChoice5 := LIZARD;
+set gameChoice := CINQUE;
+step
+check computerChoice5 = ROCK5;
+check outMess = Ha vinto il computer.;
+set userChoice5 := SCISSOR5;
+set gameChoice := CINQUE;
+step
+check computerChoice5 = LIZARD;
+check outMess = Hai vinto!;
+set userChoice5 := PAPER5;
+set gameChoice := CINQUE;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+set userChoice5 := PAPER5;
+set gameChoice := TRE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = ROCK;
+set userChoice5 := ROCK5;
+set gameChoice := CINQUE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = ROCK5;
+check outMess = Pareggio.;
+check computerChoice3 = ROCK;
+set userChoice5 := SCISSOR5;
+set gameChoice := CINQUE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = PAPER5;
+check outMess = Hai vinto!;
+check computerChoice3 = ROCK;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = PAPER5;
+check outMess = Pareggio.;
+check computerChoice3 = SCISSOR;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = PAPER5;
+check outMess = Pareggio.;
+check computerChoice3 = SCISSOR;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = PAPER5;
+check outMess = Pareggio.;
+check computerChoice3 = ROCK;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = PAPER5;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = PAPER;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = PAPER5;
+check outMess = Hai vinto!;
+check computerChoice3 = SCISSOR;
+step
+//// starting scenario
+scenario SCENARIO_NAME
+load mor.asm
+set userChoice5 := LIZARD;
+set gameChoice := CINQUE;
+step
+check computerChoice5 = ROCK5;
+check outMess = Ha vinto il computer.;
+set userChoice5 := SCISSOR5;
+set gameChoice := CINQUE;
+step
+check computerChoice5 = LIZARD;
+check outMess = Hai vinto!;
+set userChoice5 := PAPER5;
+set gameChoice := CINQUE;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+set userChoice5 := PAPER5;
+set gameChoice := TRE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = SCISSOR5;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = ROCK;
+set userChoice5 := ROCK5;
+set gameChoice := CINQUE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = ROCK5;
+check outMess = Pareggio.;
+check computerChoice3 = ROCK;
+set userChoice5 := SCISSOR5;
+set gameChoice := CINQUE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = PAPER5;
+check outMess = Hai vinto!;
+check computerChoice3 = ROCK;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = PAPER5;
+check outMess = Pareggio.;
+check computerChoice3 = SCISSOR;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := SCISSOR;
+step
+check computerChoice5 = PAPER5;
+check outMess = Pareggio.;
+check computerChoice3 = SCISSOR;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = PAPER5;
+check outMess = Pareggio.;
+check computerChoice3 = ROCK;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = PAPER5;
+check outMess = Ha vinto il computer.;
+check computerChoice3 = PAPER;
+set userChoice5 := SCISSOR5;
+set gameChoice := TRE;
+set userChoice3 := ROCK;
+step
+check computerChoice5 = PAPER5;
+check outMess = Hai vinto!;
+check computerChoice3 = SCISSOR;
+step

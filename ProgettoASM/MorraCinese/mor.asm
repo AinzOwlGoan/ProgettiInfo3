@@ -8,7 +8,7 @@ signature:
 	enum domain Sign5 = {PAPER5 | SCISSOR5 | ROCK5 | LIZARD | SPOCK}
 	enum domain Result = {WINFIRST | WINSECOND | DRAW}
 
-	dynamic monitored gameChoice: Gametype // vado a selezionare la modalita'ï¿½ di gioco
+	dynamic monitored gameChoice: Gametype // vado a selezionare la modalita'  di gioco
 	dynamic monitored userChoice3: Sign3 //scelta dell'utente
 	dynamic monitored userChoice5: Sign5 //scelta dell'utente
 
@@ -22,6 +22,7 @@ signature:
 definitions:
 
 	// Per comoditÃ  vado a definire
+	// una sola funzione che va bene sia per gioco 1 che gioco 2
 	function playResult3($s1 in Sign3, $s2 in Sign3) =
 		if($s1=$s2) then //tre casi
 			DRAW
@@ -75,7 +76,7 @@ definitions:
 
 	main rule r_Main = 
 		
-		// vado a specificare tutto in base alla modalita'ï¿½
+		// vado a specificare tutto in base alla modalita' 
 		if(gameChoice = TRE) then
 			choose $s in Sign3 with true do
 			
@@ -87,7 +88,7 @@ definitions:
 					case WINSECOND:
 						outMess := "Ha vinto il computer."
 					case DRAW:
-						outMess := "Pareggio."
+						outMess := "Patta."
 				endswitch
 			endpar
 		
@@ -103,7 +104,7 @@ definitions:
 					case WINSECOND:
 						outMess := "Ha vinto il computer."
 					case DRAW:
-						outMess := "Pareggio."
+						outMess := "Patta."
 				endswitch
 			endpar
 		endif
