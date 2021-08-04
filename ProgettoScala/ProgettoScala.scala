@@ -1,5 +1,8 @@
 import scala.collection.mutable._
 
+// sealed trait, `e risultato utile usarlo in quanto tutte le possibili combinazioni di ingredienti del bubble tea
+// sono state definite precedentemente di conseguenza, tutti i membri del trait sono gia` stati 
+// definiti ed il compilatore li conosce in anticipo.
 sealed trait Topping
 case object Panna extends Topping
 case object Marshmallow extends Topping
